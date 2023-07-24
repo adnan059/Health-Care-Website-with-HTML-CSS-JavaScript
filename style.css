@@ -1,0 +1,692 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  border: 0;
+  outline: 0;
+}
+
+:root {
+  --primColor: #40a3f8;
+  --gray1: #3e3e3e;
+
+  --gray3: #3d3d3f;
+  --gray4: #666;
+
+  --heroTitle: 4.8rem;
+  --sectionTitle: 4.2rem;
+  --bodyText: 1.6rem;
+  --cardTitle: 1.8rem;
+  --cardText: 1.4rem;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  padding: 4rem 9%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+main .container {
+  margin-top: 8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary {
+  width: max-content;
+  display: inline-block;
+  background-color: var(--primColor);
+  color: white;
+  padding: 1.2rem 2.2rem;
+  border-radius: 5px;
+}
+
+.sectionTitle {
+  color: var(--gray3);
+  font-size: var(--sectionTitle);
+  line-height: 70px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Header Starts */
+header {
+  position: relative;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+
+header .container .logo a {
+  font-size: 32px;
+  color: var(--primColor);
+  font-weight: bold;
+}
+
+header .container nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+header .container nav ul li a:not(.btn-primary) {
+  color: var(--primColor);
+}
+
+header .container .crossbar {
+  display: block;
+  width: 25px;
+  height: 25px;
+  display: none;
+}
+
+header .blur1 {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  top: 0;
+  left: -15rem;
+  background-color: rgb(151, 245, 138);
+  z-index: -5;
+  border-radius: 50%;
+  filter: blur(280px);
+}
+
+header .blur2 {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  top: 0;
+  right: 0rem;
+  background-color: rgb(164, 237, 247);
+  z-index: -6;
+  border-radius: 50%;
+  filter: blur(250px);
+}
+
+/* Header Ends */
+
+/* Hero starts */
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero .container .heroContent {
+  flex: 1;
+}
+
+.hero .container .heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.hero .container .heroContent h1 {
+  font-size: var(--heroTitle);
+  color: var(--gray1);
+}
+
+.hero .container .heroContent h1 span {
+  color: var(--primColor);
+  line-height: 70px;
+}
+
+.hero .container .heroContent p {
+  font-size: var(--bodyText);
+  color: var(--gray4);
+  line-height: 30px;
+}
+
+.hero .container .heroContent .buttons button:nth-of-type(2) {
+  background-color: white;
+  color: var(--primColor);
+  border: 1px solid var(--primColor);
+  margin-left: 1rem;
+}
+
+.hero .container .heroImage {
+  flex: 1;
+}
+.hero .container .heroImage img {
+  width: 100%;
+  display: block;
+}
+
+/* Hero ends */
+
+/* Steps starts */
+
+.steps .stepsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.steps .stepsContainer .stepBox {
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+.steps .stepsContainer .stepBox h2 {
+  font-size: var(--cardTitle);
+  color: var(--gray3);
+  line-height: 32px;
+  margin-bottom: 0.8rem;
+}
+
+.steps .stepsContainer .stepBox p {
+  font-size: var(--cardText);
+  color: var(--gray4);
+  width: 90%;
+  line-height: 24px;
+}
+
+/* Steps ends */
+
+/* Services start*/
+.services .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.services .container > div {
+  width: 50%;
+}
+
+.services .container .serviceImage img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.services .container .serviceContent h1 {
+  font-size: var(--sectionTitle);
+  text-transform: capitalize;
+  color: var(--gray3);
+  line-height: 50px;
+  margin-bottom: 2rem;
+}
+
+.services .container .serviceContent p {
+  text-align: justify;
+  color: var(--gray4);
+  font-size: var(--bodyText);
+  line-height: 30px;
+  margin-bottom: 1rem;
+}
+
+.services .container .serviceContent ul {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.services .container .serviceContent ul li {
+  color: var(--gray1);
+}
+
+.services .container .serviceContent ul li::before {
+  content: "\f058";
+  font-family: "Font Awesome 6 free";
+  margin-right: 1rem;
+  background-color: var(--primColor);
+  color: white;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+/*Services end*/
+
+/* Services 2 starts */
+.services2 {
+  position: relative;
+}
+.services2 .container > p {
+  text-align: center;
+  color: var(--gray4);
+}
+
+.services2 .blur4 {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background-color: rgb(174, 245, 141);
+  top: 0;
+  left: -5rem;
+  border-radius: 50%;
+  filter: blur(200px);
+  z-index: -10;
+}
+
+.services2 .blur4 {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background-color: rgb(157, 214, 252);
+  top: 10rem;
+  right: 0rem;
+  border-radius: 50%;
+  filter: blur(250px);
+  z-index: -15;
+}
+
+.services2 .service2Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.services2 .service2Container .service2Box {
+  background-color: white;
+  padding: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.services2 .service2Container .service2Box img {
+  width: max-content;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.services2 .service2Container .service2Box h2 {
+  font-size: var(--cardTitle);
+  color: var(--gray3);
+}
+
+.services2 .service2Container .service2Box p {
+  font-size: var(--cardText);
+  color: var(--gray4);
+  line-height: 24px;
+}
+
+/* Services 2 ends */
+
+/* Doctors start */
+.doctors .container p {
+  font-size: var(--bodyText);
+  color: var(--gray4);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.doctors .container .doctorsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.doctors .container .doctorsContainer .doctorBox {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+.doctors .container .doctorsContainer .doctorBox > img {
+  display: block;
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.doctors .container .doctorsContainer .doctorBox p {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.doctors .container .doctorsContainer .doctorBox .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.doctors .container .doctorsContainer .doctorBox .icons img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.doctors .container button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 5rem;
+}
+
+/* Doctors end */
+
+/* App Starts */
+.app .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.app .container .appImage {
+  flex: 3;
+}
+
+.app .container .appImage img {
+  width: 100%;
+}
+
+.app .container .appContent {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.app .container .appContent h1 {
+  font-size: var(--sectionTitle);
+  color: var(--gray3);
+  line-height: 50px;
+}
+
+.app .container .appContent p {
+  line-height: 30px;
+  color: var(--gray4);
+  font-size: var(--bodyText);
+}
+
+.app .container .appContent img {
+  max-width: 300px;
+}
+
+/* App Ends */
+
+/* Life starts */
+
+.life .container {
+  background-image: url("./assets/images/1.png"),
+    url("./assets/images/Rectangle.png");
+  background-repeat: no-repeat, no-repeat;
+
+  background-position: center, center;
+  background-size: cover, cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.life .container .lifeContent {
+  align-self: center;
+}
+
+.life .container .lifeContent h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  color: white;
+  line-height: 46px;
+  width: 400px;
+}
+
+.life .container .lifeContent button {
+  background-color: white;
+  color: var(--primColor);
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.life .container .lifeImage {
+  align-self: flex-end;
+}
+
+.life .container .lifeImage img {
+  width: 100%;
+  display: block;
+}
+/* Life ends */
+
+/* Footer Starts */
+footer .container {
+  padding-top: 15rem;
+  text-transform: capitalize;
+}
+
+footer .footerContainer1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  gap: 3rem;
+  color: var(--gray4);
+}
+
+footer .footerContainer1 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer .footerContainer1 .fb1 .icons a img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-left: 1rem;
+}
+
+footer .footerContainer1 .fb4 input {
+  border: 1px solid black;
+  padding: 1rem;
+  font-size: var(--bodyText);
+  border-radius: 10px;
+}
+
+footer .footerContainer2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: var(--gray4);
+}
+
+footer .footerContainer1 .fb1 h1 {
+  color: var(--primColor);
+}
+
+footer .footerContainer1 .fb4 h3 {
+  color: var(--gray1);
+}
+
+footer .footerContainer2 .fb6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+/* Footer Ends */
+
+/* Media Query */
+
+@media (max-width: 1400px) {
+  .life .container {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .hero .container > div {
+    width: 100%;
+  }
+
+  .hero .container .heroImage img {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
+
+  .steps .stepsContainer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .services .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .services .container > div {
+    width: 100%;
+  }
+
+  .services .container .serviceContent h1 {
+    text-align: center;
+  }
+
+  .services2 .service2Container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .services2 .service2Container .service2Box {
+    max-width: 450px;
+  }
+
+  .doctors .container .doctorsContainer {
+    gap: 4rem;
+  }
+
+  .app .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .app .container .appImage,
+  .app .container .appContent {
+    width: 100%;
+  }
+
+  .life .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 4rem;
+    gap: 4rem;
+  }
+
+  .life .container .lifeContent {
+    text-align: center;
+  }
+
+  .life .container .lifeImage {
+    align-self: center;
+    justify-self: flex-end;
+  }
+
+  footer .footerContainer1 {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  header .container {
+    position: relative;
+  }
+
+  header .container .crossbar {
+    display: block;
+  }
+
+  header .container nav ul {
+    position: absolute;
+    top: 98%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    background-color: #d5eefc;
+    gap: 2rem;
+    padding: 2.5rem 0;
+  }
+
+  header .container nav ul li a {
+    font-weight: bold;
+    font-size: var(--cardTitle);
+  }
+
+  header .container nav ul.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 99999;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 52.5%;
+  }
+  .life .container .lifeContent h1 {
+    width: 100%;
+  }
+
+  header .blur1 {
+    filter: blur(150px);
+  }
+}
